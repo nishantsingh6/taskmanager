@@ -15,6 +15,7 @@ import {
   StatusPage,
 } from "./pages";
 import { setOpenSidebar } from "./redux/slices/authSlice";
+import Signup from "./pages/Signup";
 
 function Layout() {
   const { user } = useSelector((state) => state.auth);
@@ -37,7 +38,7 @@ function Layout() {
       </div>
     </div>
   ) : (
-    <Navigate to='/log-in' state={{ from: location }} replace />
+    <Navigate to='/signup' state={{ from: location }} replace />
   );
 }
 
@@ -111,6 +112,7 @@ const App = () => {
           </Route>
 
           <Route path='/log-in' element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
 
