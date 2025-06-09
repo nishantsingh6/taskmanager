@@ -17,7 +17,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // explicitly allow your React app
+    origin:[ "http://localhost:3000","https://taskmanager-eight-psi.vercel.app/"], // explicitly allow your React app
     credentials: true                // allow cookies/auth headers
   })
 );
